@@ -1,6 +1,6 @@
-import { NavLinkContainer } from './styles';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { NavLinkContainer } from './styles';
 
 interface Props {
   title: string;
@@ -17,5 +17,5 @@ export default function NavLink({ title, path }: Props) {
         <a>{title}</a>
       </Link>
     </NavLinkContainer>
-  )
+  );
 }

@@ -12,12 +12,14 @@ export default createGlobalStyle`
       width: 8px;
       height: 5px;
     }
+
     ::-webkit-scrollbar-thumb {
-      background: ${({ theme }) => theme.primary};
+      background: ${props => props.theme.primary};
       border-radius: 10px;
     }
+
     ::-webkit-scrollbar-track{
-      background: ${({ theme }) => lighten(0.4, theme.primary)};
+      background: ${props => lighten(0.4, props.theme.primary)};
     }
   }
 
@@ -48,12 +50,16 @@ export default createGlobalStyle`
     margin: 0 auto;
     max-width: 85rem;
     padding: 0 1rem;
+    background: ${props => props.theme.background};
+
     @media(max-width:1450px) {
       max-width: 70rem;
     }
+
     @media(max-width:1000px) {
       max-width: 50rem;
     }
+
     @media(max-width:700px) {
       padding: 0 2rem;
     }

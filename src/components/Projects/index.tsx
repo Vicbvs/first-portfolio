@@ -1,7 +1,7 @@
+import Link from 'next/link';
 import SectionTitle from '../SectionTitle';
 import ProjectItem from './ProjectItem';
 import { Container } from './styles';
-import Link from 'next/link';
 
 function Projects() {
   return (

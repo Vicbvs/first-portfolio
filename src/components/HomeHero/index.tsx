@@ -13,24 +13,24 @@ function HomeHero() {
         </TextContainer>
         <InfosContainer>
           <CodeItem data-aos="zoom-in">
-            <spam className="comment">//Minha apresentação</spam>
-            <spam className="purple">//Infos</spam> {'\u007B'}
+            <span className="comment">//Minha apresentação</span>
+            <span className="purple">//Infos</span> {'\u007B'}
             <div>
-              Nome: <spam className="blue">Victor,</spam>
+              Nome: <span className="blue">Victor,</span>
             </div>
             <div>
-              Sobrenome: <spam className="blue">Borsatto</spam>
+              Sobrenome: <span className="blue">Borsatto</span>
             </div>
             {'\u007D'}
           </CodeItem>
           <CodeItem data-aos="zoom-in">
-            <spam className="comment">//Cargo</spam>
-            <spam className="purple">//Infos</spam> {'\u007B'}
+            <span className="comment">//Cargo</span>
+            <span className="purple">//Infos</span> {'\u007B'}
             <div>
-              Função: <spam className="blue">FullStack,</spam>
+              Função: <span className="blue">FullStack,</span>
             </div>
             <div>
-              Empresa: <spam className="blue">Valtech</spam>
+              Empresa: <span className="blue">Valtech</span>
             </div>
             {'\u007D'}
           </CodeItem>

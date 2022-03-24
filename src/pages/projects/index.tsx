@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next';
 import * as prismic from '@prismicio/client';
+import Head from 'next/head';
 import Header from '../../components/Header';
 import ProjectItem from '../../components/ProjectItem';
 import { ProjectsContainer } from '../../styles/ProjectsStyles';
@@ -21,6 +22,18 @@ interface ProjectsProps {
 export default function Projects({ projects }: ProjectsProps) {
   return (
     <ProjectsContainer>
+      <Head>
+        <title>Projects | My portfolio</title>
+        <meta name="description" content="I am a FullStack Developer" />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta property="og:image:secure_url" content="/ogimage.png" />
+        <meta name="twitter:image" content="/ogimage.png" />
+        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta
+          property="og:description"
+          content="Sou um desenvolvedor Front-end e aqui apresento alguns projetos desenvolvidos por mim!"
+        />
+      </Head>
       <Header />
       <main className="container">
         {projects.map(project => (

@@ -17,6 +17,8 @@ export const Container = styled.div<ContainerProps>`
 
   section {
     z-index: 2;
+    margin-top: 17rem;
+    padding: 0 5rem;
 
     h1 {
       color: ${props => props.theme.primary};

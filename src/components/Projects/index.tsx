@@ -3,30 +3,34 @@ import SectionTitle from '../SectionTitle';
 import ProjectItem from './ProjectItem';
 import { Container } from './styles';
 
-function Projects() {
+interface IProject {
+  slug: string;
+  title: string;
+  type: string;
+  description: string;
+  link: string;
+  thumbnail: string;
+}
+
+interface ProjectsProps {
+  projects: IProject[];
+}
+
+function Projects({ projects }: ProjectsProps) {
   return (
     <Container>
       <SectionTitle title="Últimos Projetos" description="" />
 
       <section>
-        <ProjectItem
-          title="Projeto 01"
-          type="Website"
-          slug="teste"
-          img="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y29kZXxlbnwwfHwwfHw%3D&w=1000&q=80"
-        />
-        <ProjectItem
-          title="Projeto 01"
-          type="Website"
-          slug="teste"
-          img="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y29kZXxlbnwwfHwwfHw%3D&w=1000&q=80"
-        />
-        <ProjectItem
-          title="Projeto 01"
-          type="Website"
-          slug="teste"
-          img="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y29kZXxlbnwwfHwwfHw%3D&w=1000&q=80"
-        />
+        {projects.slice(0, 3).map(project => (
+          <ProjectItem
+            key={project.slug}
+            title={project.title}
+            type={project.type}
+            slug={project.slug}
+            img={project.thumbnail}
+          />
+        ))}
       </section>
       <button type="button">
         <Link href="/projects">

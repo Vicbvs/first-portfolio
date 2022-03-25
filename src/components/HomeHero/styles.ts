@@ -117,15 +117,15 @@ export const CodeItem = styled.pre`
     margin-left: 1rem;
   }
 
-  spam.purple {
+  span.purple {
     color: #c38cdd;
   }
 
-  spam.blue {
+  span.blue {
     color: #7ac7e3;
   }
 
-  spam.comment {
+  span.comment {
     color: ${props => props.theme.text};
     margin-bottom: 1rem;
     display: block;

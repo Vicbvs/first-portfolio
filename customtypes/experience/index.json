@@ -1,0 +1,38 @@
+{
+  "id": "experience",
+  "label": "Experience",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        },
+        "type": "UID"
+      },
+      "year": {
+        "config": {
+          "label": "Year",
+          "placeholder": ""
+        },
+        "type": "Number"
+      },
+      "title": {
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        },
+        "type": "Text"
+      },
+      "description": {
+        "config": {
+          "label": "Description",
+          "placeholder": ""
+        },
+        "type": "Text"
+      }
+    }
+  }
+}

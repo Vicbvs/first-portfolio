@@ -14,6 +14,12 @@ import Footer from '../components/Footer';
 import { getPrismicClient } from '../services/prismic';
 import 'aos/dist/aos.css';
 
+interface IExperiences {
+  uid: string;
+  year: string;
+  title: string;
+  description: string;
+}
 interface IProject {
   slug: string;
   title: string;
@@ -24,10 +30,11 @@ interface IProject {
 }
 
 interface HomeProps {
+  experiences: IExperiences[];
   projects: IProject[];
 }
 
-export default function Home({ projects }: HomeProps) {
+export default function Home({ experiences, projects }: HomeProps) {
   useEffect(() => {
     Aos.init({ duration: 1500 });
   }, []);
@@ -51,7 +58,7 @@ export default function Home({ projects }: HomeProps) {
 
       <main className="container">
         <HomeHero />
-        <Experiences />
+        <Experiences experiences={experiences} />
         <Projects projects={projects} />
         <Knowledge />
         <Contact />
@@ -82,8 +89,24 @@ export const getStaticProps: GetStaticProps = async () => {
     thumbnail: project.data.thumbnail.url
   }));
 
+  const experienceResponse = await client.get({
+    predicates: prismic.predicate.at('document.type', 'experience'),
+    orderings: {
+      field: 'my.experience.year',
+      direction: 'desc'
+    }
+  });
+
+  const experiences = experienceResponse.results.map(experience => ({
+    uid: experience.uid,
+    year: experience.data.year,
+    title: experience.data.title,
+    description: experience.data.description
+  }));
+
   return {
     props: {
+      experiences,
       projects
     },
     revalidate: 86400

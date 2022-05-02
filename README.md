@@ -40,10 +40,10 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 # **Contact**
 
-### Renan Oliveira - **renanlido@yahoo.com.br**
+### Victor Borsattoa - **victor.borsattobh@gmail.com**
 
-[Github](https://github.com/renanlido) - **https://github.com/renanlido** </br>
-[Linkedin](https://www.linkedin.com/in/renanlido/) - **https://www.linkedin.com/in/renanlido/**
+[Github](https://github.com/vicbvs) - **https://github.com/vicbvs** </br>
+[Linkedin](https://www.linkedin.com/in/victor-borsatto/) - **https://www.linkedin.com/in/victor-borsatto/**
 
 </br></br>
 Thanks for coming! 😊🤗
